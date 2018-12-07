@@ -2,7 +2,6 @@ require 'pry'
 require 'json'
 require './machine.rb'
 
-#should probably move this into its own file but..time
 file = File.read('tiny_vending_machine.json')
 contents = JSON.parse(file)["contents"].first
 machine = Machine.new()
@@ -37,10 +36,11 @@ elsif response == "i"
   puts "Please insert coins:"
   money = gets.chomp
   puts "You have inserted #{money}"
+  #more logic would go here but ran out of time
 
 elseif response == "v"
   puts "Accepts coins of 1,5,10,25 Cents i.e. penny, nickel, dime, and quarter."
-  
+
 elsif response "p"
   #(p)urchase - Displays a prompt to enter the slot they'd like to purchase
 else
